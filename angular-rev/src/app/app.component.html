@@ -52,7 +52,7 @@
   
         <div class="col-md-9 col-sm-12">
             <div class="right_data">
-                   <div class="col-md-4 col-sm-6"  *ngFor='let launch of launches | paginate: { itemsPerPage: 6, currentPage: p }'>
+                   <div class="col-md-4 col-sm-6"  *ngFor='let launch of launches '>
                         <div class="programWrapper">
                            <img src="{{ launch.links.mission_patch }}" class="img-responsive"><br>
                            <a href="" class="title_id">{{ launch.mission_name }} #{{ launch.flight_number }}</a>
@@ -73,7 +73,7 @@
                     <div class="clearfix"></div>
                     <div class="col-md-12">
                         <div class="pagination">
-                            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                       
                         </div>
                    </div>
                    <div class="developer_name"><b>Developed By:</b> Kavita Verma</div>
